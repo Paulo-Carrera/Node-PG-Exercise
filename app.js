@@ -2,7 +2,7 @@
 const pg = require('pg');
 
 const companies = require('./routes/companies');
-// const invoices = require('./routes/invoices');
+const invoices = require('./routes/invoices');
 
 const express = require("express");
 const app = express();
@@ -10,7 +10,7 @@ const ExpressError = require("./expressError")
 
 app.use(express.json());
 app.use('/companies', companies);
-// app.use('/invoices', invoices);
+app.use('/invoices', invoices);
 
 /** 404 handler */
 
